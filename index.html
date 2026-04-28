@@ -37,20 +37,23 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --navy: #0c1829;
-      --navy-mid: #152238;
-      --slate: #1e3050;
-      --rose: #c4a2a2;
-      --rose-soft: #d4b5b5;
-      --rose-muted: rgba(196, 162, 162, 0.12);
-      --gold: #b8976a;
-      --gold-light: #d4b88a;
-      --cream: #faf8f5;
-      --warm-white: #fefdfb;
+      --navy: #1a1225;
+      --navy-mid: #241a32;
+      --slate: #2e2240;
+      --rose: #d4899e;
+      --rose-soft: #e8a7b8;
+      --rose-deep: #c27590;
+      --rose-muted: rgba(212, 137, 158, 0.1);
+      --rose-glass: rgba(232, 167, 184, 0.08);
+      --blush: #f5dce3;
+      --gold: #c9a080;
+      --gold-light: #ddb99a;
+      --cream: #fdf6f8;
+      --warm-white: #fefafb;
       --white: #ffffff;
-      --gray-50: #f9fafb;
-      --gray-100: #f3f4f6;
-      --gray-200: #e5e7eb;
+      --gray-50: #faf8f9;
+      --gray-100: #f5f0f2;
+      --gray-200: #e8e0e3;
       --gray-300: #d1d5db;
       --gray-400: #9ca3af;
       --gray-500: #6b7280;
@@ -91,11 +94,7 @@
     }
 
     nav.scrolled {
-      background: rgba(12, 24, 41, 0.92);
-      backdrop-filter: blur(20px) saturate(1.4);
-      -webkit-backdrop-filter: blur(20px) saturate(1.4);
       padding: 0.75rem 3rem;
-      box-shadow: 0 1px 40px rgba(0,0,0,0.12);
     }
 
     .nav-logo {
@@ -175,7 +174,7 @@
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 40%, var(--slate) 100%);
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 35%, var(--slate) 70%, #3a2a4a 100%);
       overflow: hidden;
     }
 
@@ -583,7 +582,6 @@
 
     /* ═══════════════ COMPANIES ═══════════════ */
     #companies {
-      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
       color: var(--white);
     }
 
@@ -713,7 +711,7 @@
       width: 44px;
       height: 44px;
       border-radius: 10px;
-      background: var(--rose-muted);
+      background: linear-gradient(135deg, rgba(212, 137, 158, 0.12), rgba(232, 167, 184, 0.18));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -792,8 +790,8 @@
     .channel-icon {
       width: 40px;
       height: 40px;
-      border-radius: 8px;
-      background: var(--navy);
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -997,57 +995,136 @@
     .exp-card,
     .channel,
     .insight-card {
-      background: rgba(255, 255, 255, 0.72);
-      backdrop-filter: blur(16px) saturate(1.6);
-      -webkit-backdrop-filter: blur(16px) saturate(1.6);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(24px) saturate(1.8);
+      -webkit-backdrop-filter: blur(24px) saturate(1.8);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow:
+        0 2px 16px rgba(212, 137, 158, 0.06),
+        0 1px 3px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -1px 0 rgba(212, 137, 158, 0.04);
     }
 
     .tl-content:hover,
     .exp-card:hover,
     .channel:hover,
     .insight-card:hover {
-      background: rgba(255, 255, 255, 0.85);
-      border-color: var(--rose-soft);
-      box-shadow: 0 8px 32px rgba(196, 162, 162, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.75);
+      border-color: rgba(232, 167, 184, 0.5);
+      box-shadow:
+        0 8px 40px rgba(212, 137, 158, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(212, 137, 158, 0.08);
     }
 
     .co-card {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(20px) saturate(1.4);
-      -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      background: rgba(232, 167, 184, 0.06);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid rgba(232, 167, 184, 0.12);
+      box-shadow:
+        0 2px 16px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(232, 167, 184, 0.05);
     }
 
     .co-card:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--rose);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      background: rgba(232, 167, 184, 0.12);
+      border-color: rgba(232, 167, 184, 0.35);
+      box-shadow:
+        0 16px 48px rgba(212, 137, 158, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 -1px 0 rgba(232, 167, 184, 0.1);
     }
 
     nav.scrolled {
-      background: rgba(12, 24, 41, 0.72);
-      backdrop-filter: blur(24px) saturate(1.8);
-      -webkit-backdrop-filter: blur(24px) saturate(1.8);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: 0 1px 40px rgba(0, 0, 0, 0.08);
+      background: rgba(26, 18, 37, 0.65);
+      backdrop-filter: blur(32px) saturate(2.0);
+      -webkit-backdrop-filter: blur(32px) saturate(2.0);
+      border-bottom: 1px solid rgba(232, 167, 184, 0.08);
+      box-shadow: 0 1px 40px rgba(26, 18, 37, 0.15);
     }
 
     .form-group input,
     .form-group textarea {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px) saturate(1.4);
+      -webkit-backdrop-filter: blur(12px) saturate(1.4);
+      border: 1px solid rgba(212, 137, 158, 0.12);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.8);
       border-color: var(--rose);
-      box-shadow: 0 0 0 4px var(--rose-muted);
+      box-shadow: 0 0 0 4px rgba(212, 137, 158, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    /* Glass shimmer on sections */
+    #about, #expertise {
+      background: linear-gradient(135deg, var(--cream) 0%, rgba(245, 220, 227, 0.3) 50%, var(--cream) 100%);
+    }
+
+    #companies {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 40%, #2e1f3d 70%, #3a2848 100%);
+    }
+
+    /* Subtle glass pill for tags */
+    .tl-tag {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 137, 158, 0.15);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    /* Glass button refinement */
+    .btn-primary {
+      box-shadow: 0 2px 12px rgba(201, 160, 128, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 8px 28px rgba(201, 160, 128, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-ghost {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-color: rgba(232, 167, 184, 0.3);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(232, 167, 184, 0.6);
+      background: rgba(232, 167, 184, 0.08);
+      color: var(--rose-soft);
+    }
+
+    .btn-dark {
+      box-shadow: 0 2px 12px rgba(26, 18, 37, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    /* Glass metric cards */
+    .about-metrics {
+      border-top: 1px solid rgba(212, 137, 158, 0.15);
+    }
+
+    /* Rose-tinted accent line */
+    .hero-accent-line {
+      background: linear-gradient(to bottom, transparent, var(--rose), var(--rose-deep), transparent);
+    }
+
+    /* Glass section eyebrow */
+    .section-eyebrow::before {
+      background: linear-gradient(to right, var(--rose), var(--gold));
+    }
+
+    /* Glass hero badge */
+    .hero-eyebrow::before {
+      background: linear-gradient(to right, var(--rose), transparent);
     }
 
     /* ═══════════════ ACCESSIBILITY ═══════════════ */
@@ -1106,8 +1183,8 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(12, 24, 41, 0.98);
-        backdrop-filter: blur(20px);
+        background: rgba(26, 18, 37, 0.96);
+        backdrop-filter: blur(24px);
         padding: 2rem 1.5rem;
         gap: 1.25rem;
       }
