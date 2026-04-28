@@ -8,15 +8,26 @@
   <meta property="og:title" content="Emily Pateiro | Legal Marketing Professional">
   <meta property="og:description" content="Driving growth for legal professionals through innovative digital marketing solutions.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://emily-pateiro-site.vercel.app/">
+  <meta property="og:image" content="https://emily-pateiro-site.vercel.app/assets/emily-pateiro.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emily Pateiro | Legal Marketing Professional">
+  <meta name="twitter:description" content="Driving growth for legal professionals through innovative digital marketing solutions.">
+  <meta name="twitter:image" content="https://emily-pateiro-site.vercel.app/assets/emily-pateiro.jpeg">
+  <meta name="theme-color" content="#0c1829">
   <link rel="canonical" href="https://emily-pateiro-site.vercel.app/">
+  <link rel="preload" as="image" href="assets/emily-pateiro.jpeg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    "dateCreated": "2026-04-28",
+    "dateModified": "2026-04-28",
     "mainEntity": {
       "@type": "Person",
       "name": "Emily Pateiro",
       "jobTitle": "Legal Marketing Professional",
+      "image": "https://emily-pateiro-site.vercel.app/assets/emily-pateiro.jpeg",
       "worksFor": [
         { "@type": "Organization", "name": "Internet Brands", "url": "https://www.internetbrands.com/" },
         { "@type": "Organization", "name": "Martindale-Avvo", "url": "https://www.martindale-avvo.com/" }
@@ -33,8 +44,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    .skip-link { position: absolute; top: -50px; left: 16px; background: var(--navy); color: var(--white); padding: 12px 20px; z-index: 10001; font-size: 0.875rem; border-radius: 0 0 8px 8px; transition: top 0.2s; text-decoration: none; }
+    .skip-link:focus { top: 0; }
 
     :root {
       --navy: #0c1829;
@@ -46,6 +61,7 @@
       --rose-muted: rgba(196, 162, 162, 0.12);
       --rose-glass: rgba(196, 162, 162, 0.08);
       --gold: #b8976a;
+      --gold-dark: #8a6d3b;
       --gold-light: #d4b88a;
       --cream: #faf8f5;
       --warm-white: #fefdfb;
@@ -64,7 +80,7 @@
       --ease-spring: cubic-bezier(0.28, 0.84, 0.42, 1);
     }
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 16px; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
@@ -94,6 +110,11 @@
 
     nav.scrolled {
       padding: 0.75rem 3rem;
+      background: rgba(12, 24, 41, 0.72);
+      backdrop-filter: blur(32px) saturate(2.0);
+      -webkit-backdrop-filter: blur(32px) saturate(2.0);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 1px 40px rgba(12, 24, 41, 0.12);
     }
 
     .nav-logo {
@@ -130,19 +151,19 @@
 
     .nav-links a:hover { color: var(--rose-soft); }
 
-    .nav-cta {
-      padding: 0.5rem 1.25rem !important;
-      border: 1px solid rgba(196, 162, 162, 0.5) !important;
-      border-radius: 8px !important;
-      font-size: 0.75rem !important;
+    .nav-links a.nav-cta {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid rgba(196, 162, 162, 0.5);
+      border-radius: 8px;
+      font-size: 0.75rem;
       min-height: 44px;
-      display: inline-flex !important;
+      display: inline-flex;
       align-items: center;
     }
 
-    .nav-cta:hover {
-      background: rgba(196, 162, 162, 0.12) !important;
-      border-color: var(--rose-soft) !important;
+    .nav-links a.nav-cta:hover {
+      background: rgba(196, 162, 162, 0.12);
+      border-color: var(--rose-soft);
     }
 
     .mobile-toggle {
@@ -273,6 +294,7 @@
     .hero-photo-container img {
       width: 100%;
       height: 100%;
+      max-height: 100vh;
       object-fit: cover;
       object-position: top center;
       filter: brightness(0.95) contrast(1.02);
@@ -360,7 +382,7 @@
       font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--gold-dark);
       margin-bottom: 1rem;
     }
 
@@ -407,7 +429,7 @@
       max-width: 780px;
     }
 
-    .about-body h3 {
+    .about-body h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.75rem;
       font-weight: 600;
@@ -444,7 +466,7 @@
       font-weight: 500;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--gray-400);
+      color: var(--gray-500);
       margin-top: 0.5rem;
     }
 
@@ -518,7 +540,7 @@
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--gold-dark);
       margin-bottom: 0.4rem;
     }
 
@@ -532,7 +554,7 @@
 
     .tl-period {
       font-size: 0.8rem;
-      color: var(--gray-400);
+      color: var(--gray-500);
       margin-bottom: 1rem;
     }
 
@@ -582,6 +604,7 @@
     /* ═══════════════ COMPANIES ═══════════════ */
     #companies {
       color: var(--white);
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, var(--slate) 100%);
     }
 
     #companies .section-title { color: var(--white); }
@@ -630,7 +653,7 @@
 
     .co-card p {
       font-size: 0.875rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.65);
       line-height: 1.7;
       margin-bottom: 1.25rem;
     }
@@ -662,7 +685,7 @@
       font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.6);
       margin-bottom: 2rem;
     }
 
@@ -804,7 +827,7 @@
       font-weight: 500;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--gray-400);
+      color: var(--gray-500);
     }
 
     .channel-text .ch-value {
@@ -849,7 +872,7 @@
     }
 
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--gray-400); }
+    .form-group textarea::placeholder { color: var(--gray-500); }
 
     .form-group input:focus,
     .form-group textarea:focus {
@@ -861,10 +884,13 @@
 
     .form-group textarea { resize: vertical; min-height: 120px; }
 
+    .btn-submit { align-self: flex-start; }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
     /* ═══════════════ FOOTER ═══════════════ */
     footer {
       background: var(--navy);
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.6);
       padding: 3rem;
     }
 
@@ -962,7 +988,7 @@
       font-weight: 600;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--gold-dark);
       margin-bottom: 1rem;
     }
 
@@ -984,7 +1010,7 @@
 
     .insight-meta {
       font-size: 0.75rem;
-      color: var(--gray-400);
+      color: var(--gray-500);
     }
 
     .insight-meta span { margin: 0 0.25rem; }
@@ -1035,14 +1061,6 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
 
-    nav.scrolled {
-      background: rgba(12, 24, 41, 0.72);
-      backdrop-filter: blur(32px) saturate(2.0);
-      -webkit-backdrop-filter: blur(32px) saturate(2.0);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: 0 1px 40px rgba(12, 24, 41, 0.12);
-    }
-
     .form-group input,
     .form-group textarea {
       background: rgba(255, 255, 255, 0.5);
@@ -1057,15 +1075,6 @@
       background: rgba(255, 255, 255, 0.85);
       border-color: var(--gold);
       box-shadow: 0 0 0 4px rgba(184, 151, 106, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    }
-
-    /* Glass shimmer on sections */
-    #about, #expertise {
-      background: var(--cream);
-    }
-
-    #companies {
-      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, var(--slate) 100%);
     }
 
     /* Subtle glass pill for tags */
@@ -1097,13 +1106,13 @@
 
     /* ═══════════════ ACCESSIBILITY ═══════════════ */
     :focus-visible {
-      outline: 2px solid var(--rose-soft);
+      outline: 2px solid var(--navy);
       outline-offset: 3px;
       border-radius: 4px;
     }
 
     .btn:focus-visible {
-      outline: 2px solid var(--gold-light);
+      outline: 2px solid var(--navy);
       outline-offset: 3px;
     }
 
@@ -1173,8 +1182,10 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ═══ Navigation ═══ -->
-  <nav id="navbar">
+  <nav id="navbar" aria-label="Main navigation">
     <a href="#" class="nav-logo">Emily <em>Pateiro</em></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
@@ -1184,10 +1195,12 @@
       <li><a href="#insights">Insights</a></li>
       <li><a href="#contact" class="nav-cta">Connect</a></li>
     </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <main id="main-content">
 
   <!-- ═══ Hero ═══ -->
   <section class="hero">
@@ -1206,7 +1219,7 @@
     <div class="hero-image-side">
       <div class="hero-accent-line"></div>
       <div class="hero-photo-container">
-        <img src="assets/emily-pateiro.jpeg" alt="Emily Pateiro - Legal Marketing Professional" loading="eager">
+        <img src="assets/emily-pateiro.jpeg" alt="Emily Pateiro - Legal Marketing Professional" loading="eager" width="800" height="1000" fetchpriority="high">
         <div class="hero-photo-overlay"></div>
       </div>
     </div>
@@ -1218,7 +1231,7 @@
       <div class="about-layout about-layout--no-photo">
         <div class="about-body">
           <div class="section-eyebrow">About</div>
-          <h3 class="reveal">Where Law Meets<br>Digital Innovation</h3>
+          <h2 class="reveal">Where Law Meets<br>Digital Innovation</h2>
           <p class="reveal">Emily Pateiro is a legal marketing professional specializing in empowering attorneys and law firms to expand their reach through cutting-edge digital solutions and strategic growth initiatives.</p>
           <p class="reveal">Working within Internet Brands' legal division and Martindale-Avvo, Emily operates at the heart of the largest legal marketing network in the United States &mdash; connecting over one million attorneys with the millions of people seeking legal assistance every month.</p>
           <p class="reveal">Her expertise spans lead generation, AI-powered intake systems, predictive analytics, and full-stack marketing &mdash; helping legal professionals build sustainable practices in an increasingly digital landscape.</p>
@@ -1329,7 +1342,7 @@
 
       <div class="companies-grid">
         <a href="https://www.internetbrands.com/" target="_blank" rel="noopener" class="co-card reveal">
-          <img src="assets/ib-logo.svg" alt="Internet Brands" class="co-card-logo">
+          <img src="assets/ib-logo.svg" alt="Internet Brands" class="co-card-logo" width="100" height="28" loading="lazy">
           <h3>Internet Brands</h3>
           <p>A leading digital holding company founded in 1998, operating high-value brands across legal, health, dental, auto, and travel verticals from El Segundo, CA.</p>
           <span class="co-card-link">Visit Website &rarr;</span>
@@ -1343,14 +1356,14 @@
         </a>
 
         <a href="https://www.martindale-avvo.com/" target="_blank" rel="noopener" class="co-card reveal">
-          <img src="assets/martindale-avvo-logo.svg" alt="Martindale-Avvo" class="co-card-logo">
+          <img src="assets/martindale-avvo-logo.svg" alt="Martindale-Avvo" class="co-card-logo" width="160" height="28" loading="lazy">
           <h3>Martindale-Avvo</h3>
           <p>The largest legal marketing network, reaching 1M+ attorneys and 25M+ people seeking legal help monthly. Trusted partner for sustainable law firm growth.</p>
           <span class="co-card-link">Visit Website &rarr;</span>
         </a>
 
         <a href="https://www.martindale.com/" target="_blank" rel="noopener" class="co-card reveal">
-          <img src="assets/martindale-logo.svg" alt="Martindale-Hubbell" class="co-card-logo">
+          <img src="assets/martindale-logo.svg" alt="Martindale-Hubbell" class="co-card-logo" width="120" height="28" loading="lazy">
           <h3>Martindale-Hubbell</h3>
           <p>The most trusted attorney rating system with over 150 years of legacy. The richest database of legal professionals in the nation, spanning all 50 states.</p>
           <span class="co-card-link">Visit Website &rarr;</span>
@@ -1361,14 +1374,14 @@
       <div class="brand-bar">
         <div class="brand-bar-label">Brands Within the Network</div>
         <div class="brand-logos">
-          <img src="assets/martindale-logo-alt.png" alt="Martindale">
-          <img src="assets/avvo-logo.png" alt="Avvo">
-          <img src="assets/lawyers-logo.png" alt="Lawyers.com">
-          <img src="assets/nolo-logo.png" alt="Nolo">
-          <img src="assets/superlawyers-logo.svg" alt="Super Lawyers">
-          <img src="assets/ngage-logo.png" alt="Ngage Live Chat">
-          <img src="assets/captorra-logo.png" alt="Captorra">
-          <img src="assets/webmd-logo.svg" alt="WebMD">
+          <img src="assets/martindale-logo-alt.png" alt="Martindale" width="166" height="24" loading="lazy">
+          <img src="assets/avvo-logo.png" alt="Avvo" width="85" height="24" loading="lazy">
+          <img src="assets/lawyers-logo.png" alt="Lawyers.com" width="156" height="24" loading="lazy">
+          <img src="assets/nolo-logo.png" alt="Nolo" width="122" height="24" loading="lazy">
+          <img src="assets/superlawyers-logo.svg" alt="Super Lawyers" width="138" height="20" loading="lazy">
+          <img src="assets/ngage-logo.png" alt="Ngage Live Chat" width="170" height="24" loading="lazy">
+          <img src="assets/captorra-logo.png" alt="Captorra" width="112" height="24" loading="lazy">
+          <img src="assets/webmd-logo.svg" alt="WebMD" width="110" height="26" loading="lazy">
         </div>
       </div>
     </div>
@@ -1550,11 +1563,14 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Your message..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-dark" style="align-self: flex-start;">Send Message &rarr;</button>
+          <button type="submit" class="btn btn-dark btn-submit">Send Message &rarr;</button>
+          <div aria-live="polite" id="form-status" class="sr-only"></div>
         </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ═══ Footer ═══ -->
   <footer>
@@ -1582,8 +1598,21 @@
     // Mobile menu
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
-    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+    function closeMobileMenu() { navLinks.classList.remove('open'); mobileToggle.setAttribute('aria-expanded', 'false'); }
+    function openMobileMenu() { navLinks.classList.add('open'); mobileToggle.setAttribute('aria-expanded', 'true'); }
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.contains('open') ? closeMobileMenu() : openMobileMenu();
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) closeMobileMenu();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeMobileMenu();
+    });
+
+    // Decorative SVGs - hide from screen readers
+    document.querySelectorAll('.exp-icon svg, .channel-icon svg, .footer-social svg').forEach(svg => svg.setAttribute('aria-hidden', 'true'));
 
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
@@ -1597,30 +1626,61 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Smooth scroll
+    // Smooth scroll with nav offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const href = this.getAttribute('href');
+        if (href === '#') { window.scrollTo({ top: 0, behavior: 'smooth' }); e.preventDefault(); return; }
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const navHeight = navbar.offsetHeight + 16;
+          const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
       });
     });
 
     // Contact form
     function handleSubmit(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      const original = btn.textContent;
-      btn.textContent = 'Message Sent!';
-      btn.style.background = '#16a34a';
-      btn.style.color = '#fff';
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const original = btn.innerHTML;
+
+      // Basic client-side validation feedback
+      const email = form.querySelector('#email');
+      if (email && !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        email.setCustomValidity('Please enter a valid email address');
+        email.reportValidity();
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      // NOTE: No backend configured. Replace this with actual fetch() to your endpoint.
+      // Simulating submission for demo purposes.
       setTimeout(() => {
-        btn.textContent = original;
-        btn.style.background = '';
-        btn.style.color = '';
-        e.target.reset();
-      }, 3000);
+        btn.textContent = 'Message Sent!';
+        btn.style.background = '#16a34a';
+        btn.style.color = '#fff';
+        document.getElementById('form-status').textContent = 'Your message has been sent successfully.';
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+          form.reset();
+          document.getElementById('form-status').textContent = '';
+        }, 3000);
+      }, 800);
     }
+
+    // Clear custom validity on input
+    document.getElementById('email')?.addEventListener('input', function() {
+      this.setCustomValidity('');
+    });
   </script>
 
 </body>
