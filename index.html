@@ -8,6 +8,28 @@
   <meta property="og:title" content="Emily Pateiro | Legal Marketing Professional">
   <meta property="og:description" content="Driving growth for legal professionals through innovative digital marketing solutions.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://emily-pateiro-site.vercel.app/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Emily Pateiro",
+      "jobTitle": "Legal Marketing Professional",
+      "worksFor": [
+        { "@type": "Organization", "name": "Internet Brands", "url": "https://www.internetbrands.com/" },
+        { "@type": "Organization", "name": "Martindale-Avvo", "url": "https://www.martindale-avvo.com/" }
+      ],
+      "url": "https://emily-pateiro-site.vercel.app/",
+      "sameAs": [
+        "https://www.linkedin.com/in/emily-pateiro-2896371a2/",
+        "https://www.instagram.com/emmi_pat/"
+      ],
+      "knowsAbout": ["Legal Marketing", "SEO for Law Firms", "AI Legal Intake", "Lead Generation", "Digital Strategy"]
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -911,10 +933,70 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ═══════════════ INSIGHTS ═══════════════ */
+    #insights { background: var(--white); }
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .insight-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.35s var(--ease);
+    }
+
+    .insight-card:hover {
+      border-color: var(--rose);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(196, 162, 162, 0.1);
+    }
+
+    .insight-tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .insight-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+    }
+
+    .insight-card p {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .insight-meta {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+    }
+
+    .insight-meta span { margin: 0 0.25rem; }
+
     /* ═══════════════ LIQUID GLASS ═══════════════ */
     .tl-content,
     .exp-card,
-    .channel {
+    .channel,
+    .insight-card {
       background: rgba(255, 255, 255, 0.72);
       backdrop-filter: blur(16px) saturate(1.6);
       -webkit-backdrop-filter: blur(16px) saturate(1.6);
@@ -924,7 +1006,8 @@
 
     .tl-content:hover,
     .exp-card:hover,
-    .channel:hover {
+    .channel:hover,
+    .insight-card:hover {
       background: rgba(255, 255, 255, 0.85);
       border-color: var(--rose-soft);
       box-shadow: 0 8px 32px rgba(196, 162, 162, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -1008,6 +1091,7 @@
       .about-portrait { max-width: 340px; }
       .companies-grid { grid-template-columns: 1fr; }
       .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+      .insights-grid { grid-template-columns: 1fr 1fr; }
       .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
     }
 
@@ -1034,6 +1118,7 @@
       .about-metrics { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
       .metric .metric-value { font-size: 1.75rem; }
       .expertise-grid { grid-template-columns: 1fr; }
+      .insights-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .brand-logos { gap: 2rem; }
       .brand-logos img { height: 18px; }
@@ -1051,6 +1136,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#companies">Affiliations</a></li>
       <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#insights">Insights</a></li>
       <li><a href="#contact" class="nav-cta">Connect</a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
@@ -1237,6 +1323,7 @@
           <img src="assets/superlawyers-logo.svg" alt="Super Lawyers">
           <img src="assets/ngage-logo.png" alt="Ngage Live Chat">
           <img src="assets/captorra-logo.png" alt="Captorra">
+          <img src="assets/webmd-logo.svg" alt="WebMD">
         </div>
       </div>
     </div>
@@ -1299,6 +1386,41 @@
           <h3>Client Acquisition</h3>
           <p>End-to-end client journey optimization from initial search to successful attorney engagement.</p>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Insights ═══ -->
+  <section id="insights">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Insights</div>
+        <h2 class="section-title">Perspectives on Legal Marketing</h2>
+        <p class="section-lead">Practical strategies and industry analysis for attorneys and law firms navigating the digital landscape.</p>
+      </div>
+      <div class="insights-grid">
+
+        <a href="insights/ai-transforming-legal-intake.html" class="insight-card reveal">
+          <div class="insight-tag">Legal Technology</div>
+          <h3>How AI Is Transforming Legal Client Intake</h3>
+          <p>From agentic phone systems to predictive case analytics, AI is reshaping how attorneys connect with potential clients.</p>
+          <div class="insight-meta">April 15, 2026 <span>&middot;</span> 5 min read</div>
+        </a>
+
+        <a href="insights/why-seo-matters-law-firms.html" class="insight-card reveal">
+          <div class="insight-tag">Digital Strategy</div>
+          <h3>Why SEO Still Matters More Than Ever for Law Firms</h3>
+          <p>In an era of AI and paid ads, organic search remains the highest-ROI channel for attorney client acquisition.</p>
+          <div class="insight-meta">March 28, 2026 <span>&middot;</span> 6 min read</div>
+        </a>
+
+        <a href="insights/building-your-law-firm-website.html" class="insight-card reveal">
+          <div class="insight-tag">Web Strategy</div>
+          <h3>Building a Law Firm Website That Actually Converts</h3>
+          <p>Most law firm websites look professional but fail to convert visitors into clients. Here's what separates the best from the rest.</p>
+          <div class="insight-meta">March 10, 2026 <span>&middot;</span> 7 min read</div>
+        </a>
 
       </div>
     </div>
