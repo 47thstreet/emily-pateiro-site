@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emily Pateiro | Legal Marketing Professional</title>
+  <meta name="description" content="Emily Pateiro - Legal Marketing Professional at Internet Brands, Martindale-Avvo. Connecting attorneys with growth opportunities through innovative digital solutions.">
+  <meta property="og:title" content="Emily Pateiro | Legal Marketing Professional">
+  <meta property="og:description" content="Driving growth for legal professionals through innovative digital marketing solutions.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0c1829;
+      --navy-mid: #152238;
+      --slate: #1e3050;
+      --rose: #c4a2a2;
+      --rose-soft: #d4b5b5;
+      --rose-muted: rgba(196, 162, 162, 0.12);
+      --gold: #b8976a;
+      --gold-light: #d4b88a;
+      --cream: #faf8f5;
+      --warm-white: #fefdfb;
+      --white: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+      --gray-900: #111827;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+      color: var(--gray-900);
+      background: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    .serif { font-family: 'Cormorant Garamond', 'Georgia', serif; }
+
+    /* ═══════════════ NAVIGATION ═══════════════ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.25rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.4s var(--ease);
+    }
+
+    nav.scrolled {
+      background: rgba(12, 24, 41, 0.92);
+      backdrop-filter: blur(20px) saturate(1.4);
+      -webkit-backdrop-filter: blur(20px) saturate(1.4);
+      padding: 0.75rem 3rem;
+      box-shadow: 0 1px 40px rgba(0,0,0,0.12);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-logo em {
+      font-style: italic;
+      color: var(--rose-soft);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.25rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.3s var(--ease);
+    }
+
+    .nav-links a:hover { color: var(--rose-soft); }
+
+    .nav-cta {
+      padding: 0.5rem 1.25rem !important;
+      border: 1px solid rgba(196, 162, 162, 0.5) !important;
+      border-radius: 4px !important;
+      font-size: 0.75rem !important;
+    }
+
+    .nav-cta:hover {
+      background: rgba(196, 162, 162, 0.12) !important;
+      border-color: var(--rose-soft) !important;
+    }
+
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+
+    .mobile-toggle span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      transition: all 0.3s var(--ease);
+      border-radius: 2px;
+    }
+
+    /* ═══════════════ HERO ═══════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 40%, var(--slate) 100%);
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to top, var(--cream), transparent);
+      z-index: 3;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 4rem 6rem 6rem;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--rose-soft);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s var(--ease) 0.2s forwards;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--rose);
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s var(--ease) 0.4s forwards;
+    }
+
+    .hero h1 .line-2 {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--rose-soft);
+      font-size: 0.85em;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s var(--ease) 0.6s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s var(--ease) 0.8s forwards;
+    }
+
+    .hero-image-side {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 0;
+    }
+
+    .hero-photo-container {
+      position: relative;
+      width: 100%;
+      height: 85%;
+      align-self: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: brightness(0.95) contrast(1.02);
+    }
+
+    .hero-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--navy) 0%, transparent 30%),
+                  linear-gradient(to top, var(--navy) 0%, transparent 20%);
+      pointer-events: none;
+    }
+
+    .hero-accent-line {
+      position: absolute;
+      left: -1px;
+      top: 15%;
+      bottom: 15%;
+      width: 3px;
+      background: linear-gradient(to bottom, transparent, var(--rose), transparent);
+      z-index: 2;
+    }
+
+    /* ═══════════════ BUTTONS ═══════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.35s var(--ease);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 3px;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(184, 151, 106, 0.3);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 3px;
+    }
+
+    .btn-ghost:hover {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 3px;
+    }
+
+    .btn-dark:hover {
+      background: var(--navy-mid);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(12,24,41,0.25);
+    }
+
+    /* ═══════════════ SECTIONS ═══════════════ */
+    section { padding: 7rem 3rem; }
+    .container { max-width: 1140px; margin: 0 auto; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 600;
+      color: var(--gray-900);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      font-size: 1rem;
+      color: var(--gray-500);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    .section-header { margin-bottom: 4rem; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-eyebrow { justify-content: center; }
+    .section-header.center .section-lead { margin: 0 auto; }
+
+    /* ═══════════════ ABOUT ═══════════════ */
+    #about { background: var(--cream); }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-portrait {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+
+    .about-portrait img {
+      width: 100%;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .about-portrait::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 6px;
+      box-shadow: inset 0 0 0 1px rgba(196, 162, 162, 0.15);
+      pointer-events: none;
+    }
+
+    .about-frame {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      bottom: 12px;
+      left: 12px;
+      border: 1px solid var(--rose);
+      border-radius: 6px;
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    .about-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--gray-900);
+    }
+
+    .about-body p {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .metric .metric-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .metric .metric-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-top: 0.5rem;
+    }
+
+    /* ═══════════════ EXPERIENCE ═══════════════ */
+    #experience { background: var(--white); }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--rose), var(--gray-200));
+    }
+
+    .tl-item {
+      position: relative;
+      padding-left: 72px;
+      margin-bottom: 3.5rem;
+    }
+
+    .tl-item:last-child { margin-bottom: 0; }
+
+    .tl-dot {
+      position: absolute;
+      left: 16px;
+      top: 6px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--rose);
+      z-index: 1;
+    }
+
+    .tl-dot::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--rose);
+    }
+
+    .tl-content {
+      background: var(--gray-50);
+      border-radius: 8px;
+      padding: 2rem 2.25rem;
+      border: 1px solid var(--gray-100);
+      transition: all 0.35s var(--ease);
+    }
+
+    .tl-content:hover {
+      border-color: var(--rose-soft);
+      box-shadow: 0 8px 30px rgba(196, 162, 162, 0.1);
+      transform: translateX(4px);
+    }
+
+    .tl-company {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .tl-role {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.25rem;
+    }
+
+    .tl-period {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      margin-bottom: 1rem;
+    }
+
+    .tl-points {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tl-points li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    .tl-points li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--rose);
+    }
+
+    .tl-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1.25rem;
+    }
+
+    .tl-tag {
+      padding: 0.25rem 0.7rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--gray-600);
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 3px;
+    }
+
+    /* ═══════════════ COMPANIES ═══════════════ */
+    #companies {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: var(--white);
+    }
+
+    #companies .section-title { color: var(--white); }
+    #companies .section-lead { color: rgba(255,255,255,0.5); }
+
+    .companies-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .co-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 2.25rem;
+      transition: all 0.35s var(--ease);
+      text-decoration: none;
+      display: block;
+    }
+
+    .co-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: var(--rose);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+    }
+
+    .co-card-logo {
+      height: 28px;
+      margin-bottom: 1.5rem;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      filter: brightness(0) invert(1);
+    }
+
+    .co-card:hover .co-card-logo { opacity: 1; }
+
+    .co-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .co-card p {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .co-card-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--rose-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.3s var(--ease);
+    }
+
+    .co-card:hover .co-card-link { gap: 0.75rem; }
+
+    /* ── Brand Logos Bar ── */
+    .brand-bar {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .brand-bar-label {
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 2rem;
+    }
+
+    .brand-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .brand-logos img {
+      height: 22px;
+      opacity: 0.35;
+      filter: brightness(0) invert(1);
+      transition: opacity 0.3s var(--ease);
+    }
+
+    .brand-logos img:hover { opacity: 0.7; }
+
+    /* ═══════════════ EXPERTISE ═══════════════ */
+    #expertise { background: var(--cream); }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .exp-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 2.25rem 2rem;
+      border: 1px solid var(--gray-100);
+      transition: all 0.35s var(--ease);
+    }
+
+    .exp-card:hover {
+      border-color: var(--rose);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(196, 162, 162, 0.1);
+    }
+
+    .exp-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--rose-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .exp-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--rose);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .exp-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-card p {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════ CONTACT ═══════════════ */
+    #contact { background: var(--white); }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+
+    .contact-intro h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .contact-intro p {
+      color: var(--gray-500);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+
+    .channel {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--gray-700);
+      padding: 1rem 1.25rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: 6px;
+      transition: all 0.3s var(--ease);
+    }
+
+    .channel:hover {
+      border-color: var(--rose);
+      background: var(--rose-muted);
+      transform: translateX(4px);
+    }
+
+    .channel-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .channel-icon svg { width: 18px; height: 18px; fill: var(--rose-soft); }
+
+    .channel-text .ch-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+
+    .channel-text .ch-value {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--gray-800);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--gray-900);
+      transition: all 0.3s var(--ease);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--gray-400); }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--rose);
+      background: var(--white);
+      box-shadow: 0 0 0 4px var(--rose-muted);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    /* ═══════════════ FOOTER ═══════════════ */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.4);
+      padding: 3rem;
+    }
+
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--white);
+    }
+
+    .footer-brand em { font-style: italic; color: var(--rose-soft); }
+
+    .footer-social {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease);
+    }
+
+    .footer-social a:hover {
+      border-color: var(--rose);
+      background: rgba(196, 162, 162, 0.1);
+    }
+
+    .footer-social svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.5); }
+    .footer-social a:hover svg { fill: var(--rose-soft); }
+
+    .footer-copy { font-size: 0.78rem; }
+
+    /* ═══════════════ SCROLL ANIMATIONS ═══════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════ ANIMATIONS ═══════════════ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════ RESPONSIVE ═══════════════ */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-content { padding: 8rem 3rem 4rem; }
+      .hero-image-side { height: 50vh; }
+      .hero-photo-container { height: 100%; }
+      .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .about-portrait { max-width: 340px; }
+      .companies-grid { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      nav.scrolled { padding: 0.75rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(12, 24, 41, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 2rem 1.5rem;
+        gap: 1.25rem;
+      }
+      .mobile-toggle { display: flex; }
+      section { padding: 4.5rem 1.5rem; }
+      .hero-content { padding: 7rem 1.5rem 3rem; }
+      .hero-image-side { height: 40vh; }
+      .about-metrics { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .metric .metric-value { font-size: 1.75rem; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .brand-logos { gap: 2rem; }
+      .brand-logos img { height: 18px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Emily <em>Pateiro</em></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#companies">Affiliations</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#contact" class="nav-cta">Connect</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Legal Marketing Professional</div>
+      <h1>
+        Emily Pateiro
+        <span class="line-2">Legal &amp; Digital Innovation</span>
+      </h1>
+      <p class="hero-desc">Empowering attorneys and law firms to grow through data-driven marketing, AI-powered solutions, and the largest legal network in the United States.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn btn-ghost">View Experience</a>
+      </div>
+    </div>
+    <div class="hero-image-side">
+      <div class="hero-accent-line"></div>
+      <div class="hero-photo-container">
+        <img src="assets/emily-pateiro.jpeg" alt="Emily Pateiro - Legal Marketing Professional" loading="eager">
+        <div class="hero-photo-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ About ═══ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-portrait reveal">
+          <img src="assets/emily-pateiro.jpeg" alt="Emily Pateiro">
+          <div class="about-frame"></div>
+        </div>
+        <div class="about-body">
+          <div class="section-eyebrow">About</div>
+          <h3 class="reveal">Where Law Meets<br>Digital Innovation</h3>
+          <p class="reveal">Emily Pateiro is a legal marketing professional specializing in empowering attorneys and law firms to expand their reach through cutting-edge digital solutions and strategic growth initiatives.</p>
+          <p class="reveal">Working within Internet Brands' legal division and Martindale-Avvo, Emily operates at the heart of the largest legal marketing network in the United States &mdash; connecting over one million attorneys with the millions of people seeking legal assistance every month.</p>
+          <p class="reveal">Her expertise spans lead generation, AI-powered intake systems, predictive analytics, and full-stack marketing &mdash; helping legal professionals build sustainable practices in an increasingly digital landscape.</p>
+          <div class="about-metrics reveal">
+            <div class="metric">
+              <div class="metric-value">1M+</div>
+              <div class="metric-label">Attorneys in Network</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">25M+</div>
+              <div class="metric-label">Monthly Seekers</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">895K</div>
+              <div class="metric-label">Leads per Month</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Experience ═══ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Career</div>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-lead">A career built at the intersection of legal expertise, marketing strategy, and technology innovation.</p>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-company">Martindale-Avvo &middot; Internet Brands Legal</div>
+            <div class="tl-role">Legal Marketing Professional</div>
+            <div class="tl-period">Current Role</div>
+            <ul class="tl-points">
+              <li>Drives attorney acquisition and engagement across the US's largest legal marketing network</li>
+              <li>Works with AI-powered intake solutions including intelligent chat, agentic phone systems, and digital forms</li>
+              <li>Supports law firm growth through strategic lead generation, reputation management, and digital presence</li>
+              <li>Leverages predictive analytics and intelligent routing to optimize attorney-client matching</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">Legal Marketing</span>
+              <span class="tl-tag">Lead Generation</span>
+              <span class="tl-tag">AI Solutions</span>
+              <span class="tl-tag">Predictive Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-company">Internet Brands</div>
+            <div class="tl-role">Digital Marketing &amp; Strategy</div>
+            <div class="tl-period">El Segundo, CA</div>
+            <ul class="tl-points">
+              <li>Part of a premier digital holding company managing high-value brands across legal, health, dental, and travel verticals</li>
+              <li>Contributes to the Legal division &mdash; the US's largest legal services audience</li>
+              <li>Works across FindLaw, Avvo, Martindale, Lawyers.com, Nolo, and SuperLawyers brands</li>
+              <li>Supports enterprise solutions including Authority Suite, ProVantage, AdVantage, and WebVantage</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">Digital Strategy</span>
+              <span class="tl-tag">Multi-Brand Portfolio</span>
+              <span class="tl-tag">SaaS Platforms</span>
+              <span class="tl-tag">Enterprise Growth</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-company">Martindale-Hubbell</div>
+            <div class="tl-role">Legal Network &amp; Attorney Services</div>
+            <div class="tl-period">150+ Year Legacy</div>
+            <ul class="tl-points">
+              <li>Contributes to the world's most trusted attorney rating system for legal ability and ethical standards</li>
+              <li>Supports the richest database of legal professionals in the United States</li>
+              <li>Helps attorneys build professional profiles, generate qualified leads, and grow their practices</li>
+              <li>Facilitates connections across 20+ practice areas and all 50 states</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">Attorney Ratings</span>
+              <span class="tl-tag">Legal Directory</span>
+              <span class="tl-tag">Professional Networking</span>
+              <span class="tl-tag">150+ Years</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Companies ═══ -->
+  <section id="companies">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Affiliations</div>
+        <h2 class="section-title">Companies &amp; Brands</h2>
+        <p class="section-lead">Working across a powerful ecosystem of legal technology and marketing platforms.</p>
+      </div>
+
+      <div class="companies-grid">
+        <a href="https://www.internetbrands.com/" target="_blank" rel="noopener" class="co-card reveal">
+          <img src="assets/ib-logo.svg" alt="Internet Brands" class="co-card-logo">
+          <h3>Internet Brands</h3>
+          <p>A leading digital holding company founded in 1998, operating high-value brands across legal, health, dental, auto, and travel verticals from El Segundo, CA.</p>
+          <span class="co-card-link">Visit Website &rarr;</span>
+        </a>
+
+        <a href="https://www.internetbrands.com/legal" target="_blank" rel="noopener" class="co-card reveal">
+          <img src="assets/ib-logo.svg" alt="IB Legal Division" class="co-card-logo">
+          <h3>IB Legal Division</h3>
+          <p>The US's largest legal services audience &mdash; powering AI-driven intake, predictive analytics, intelligent routing, and full-stack marketing solutions for attorneys.</p>
+          <span class="co-card-link">Visit Website &rarr;</span>
+        </a>
+
+        <a href="https://www.martindale-avvo.com/" target="_blank" rel="noopener" class="co-card reveal">
+          <img src="assets/martindale-avvo-logo.svg" alt="Martindale-Avvo" class="co-card-logo">
+          <h3>Martindale-Avvo</h3>
+          <p>The largest legal marketing network, reaching 1M+ attorneys and 25M+ people seeking legal help monthly. Trusted partner for sustainable law firm growth.</p>
+          <span class="co-card-link">Visit Website &rarr;</span>
+        </a>
+
+        <a href="https://www.martindale.com/" target="_blank" rel="noopener" class="co-card reveal">
+          <img src="assets/martindale-logo.svg" alt="Martindale-Hubbell" class="co-card-logo">
+          <h3>Martindale-Hubbell</h3>
+          <p>The most trusted attorney rating system with over 150 years of legacy. The richest database of legal professionals in the nation, spanning all 50 states.</p>
+          <span class="co-card-link">Visit Website &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Brand Logos Bar -->
+      <div class="brand-bar">
+        <div class="brand-bar-label">Brands Within the Network</div>
+        <div class="brand-logos">
+          <img src="assets/martindale-logo-alt.png" alt="Martindale">
+          <img src="assets/avvo-logo.png" alt="Avvo">
+          <img src="assets/lawyers-logo.png" alt="Lawyers.com">
+          <img src="assets/nolo-logo.png" alt="Nolo">
+          <img src="assets/superlawyers-logo.svg" alt="Super Lawyers">
+          <img src="assets/ngage-logo.png" alt="Ngage Live Chat">
+          <img src="assets/captorra-logo.png" alt="Captorra">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Expertise ═══ -->
+  <section id="expertise">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Expertise</div>
+        <h2 class="section-title">Areas of Specialization</h2>
+        <p class="section-lead">Core competencies spanning legal marketing, technology, and strategic growth.</p>
+      </div>
+      <div class="expertise-grid">
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Legal Marketing Strategy</h3>
+          <p>Comprehensive marketing solutions tailored for attorneys and law firms across all practice areas and firm sizes.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M8.5 3a4 4 0 100 8 4 4 0 000-8zM20 8v6M23 11h-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Lead Generation</h3>
+          <p>Multi-channel lead acquisition connecting legal professionals with qualified prospects at scale.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>AI-Powered Solutions</h3>
+          <p>Intelligent intake, predictive analytics, and automated routing powered by advanced AI systems.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Data &amp; Analytics</h3>
+          <p>Case value analytics, conversion optimization, and data-driven performance measurement.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Digital Presence</h3>
+          <p>Website development, SEO, reputation management, and comprehensive online strategy.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 3a4 4 0 100 8 4 4 0 000-8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Client Acquisition</h3>
+          <p>End-to-end client journey optimization from initial search to successful attorney engagement.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Contact ═══ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Connect</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-lead">Interested in legal marketing solutions or simply want to connect? Let's talk.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <h3>Let's Connect</h3>
+          <p>Whether you're an attorney looking to grow your practice, a legal professional exploring marketing solutions, or simply want to connect &mdash; I look forward to hearing from you.</p>
+          <div class="contact-channels">
+            <a href="https://www.linkedin.com/in/emily-pateiro-2896371a2/" target="_blank" rel="noopener" class="channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="channel-text">
+                <div class="ch-label">LinkedIn</div>
+                <div class="ch-value">Emily Pateiro</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/emmi_pat/" target="_blank" rel="noopener" class="channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div class="channel-text">
+                <div class="ch-label">Instagram</div>
+                <div class="ch-value">@emmi_pat</div>
+              </div>
+            </a>
+            <a href="https://www.martindale-avvo.com/" target="_blank" rel="noopener" class="channel">
+              <div class="channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div class="channel-text">
+                <div class="ch-label">Company</div>
+                <div class="ch-value">Martindale-Avvo</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="How can I help?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark" style="align-self: flex-start;">Send Message &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Emily <em>Pateiro</em></div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/emily-pateiro-2896371a2/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/emmi_pat/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Emily Pateiro. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Contact form
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const original = btn.textContent;
+      btn.textContent = 'Message Sent!';
+      btn.style.background = '#16a34a';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.color = '';
+        e.target.reset();
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
